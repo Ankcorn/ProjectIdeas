@@ -1,0 +1,45 @@
+{
+  "name": "projectideas",
+  "description": "Creates a fun node project for you to work on!",
+  "version": "0.0.0",
+  "author": "ThomasAnkcorn @Ankcorn",
+  "bin": {
+    "projectideas": "./bin/run"
+  },
+  "bugs": "https://github.com/https://github.com/Ankcorn/ProjectIdeas.git/https://github.com/Ankcorn/ProjectIdeas.git/issues",
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^2",
+    "inquirer": "^7.0.0"
+  },
+  "devDependencies": {
+    "@oclif/test": "^1",
+    "chai": "^4",
+    "eslint": "^5.13",
+    "eslint-config-oclif": "^3.1",
+    "mocha": "^5",
+    "nyc": "^14"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/src"
+  ],
+  "homepage": "https://github.com/https://github.com/Ankcorn/ProjectIdeas.git/https://github.com/Ankcorn/ProjectIdeas.git",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "bin": "projectideas"
+  },
+  "repository": "https://github.com/Ankcorn/ProjectIdeas.git/https://github.com/Ankcorn/ProjectIdeas.git",
+  "scripts": {
+    "posttest": "eslint .",
+    "test": "nyc mocha --forbid-only \"test/**/*.test.js\""
+  }
+}
