@@ -1,11 +1,21 @@
 const {Command, flags} = require('@oclif/command')
-const cli = require('inquirer')
 
+const api = require('./publicapi')
+const climateChangeReminder = require('climate-change-reminder')
+function delay(time) {
+  return new Promise(resolve => setTimeout(resolve, time))
+}
 class ProjectideasCommand extends Command {
   async run() {
     const {flags} = this.parse(ProjectideasCommand)
-    const name = flags.name || (await cli.prompt({type: 'input', message: 'What is your name?', default: 'world', name: 'name'})).name
-    this.log(`hello ${name} from ./src/index.js`)
+    this.log(climateChangeReminder())
+    await delay(1000)
+    this.log('\n\n\n')
+    const category = flags.name || await api.categories()
+
+    this.log('You selected', category || 'everything', ', Awesome Choice!')
+    const wow = await api.random({category})
+    this.log(wow)
   }
 }
 
@@ -19,7 +29,7 @@ ProjectideasCommand.flags = {
   version: flags.version({char: 'v'}),
   // add --help flag to show CLI version
   help: flags.help({char: 'h'}),
-  name: flags.string({char: 'n', description: 'name to print'}),
+  name: flags.string({char: 'c', description: 'a category to work with'}),
 }
 
 module.exports = ProjectideasCommand
