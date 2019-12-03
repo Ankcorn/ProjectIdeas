@@ -16,7 +16,6 @@ async function categories() {
 }
 
 async function random({category}) {
-  console.log(PUBLIC_API_URL + `random${category ? '?category=' + category : ''}`)
   const {data} = await get(PUBLIC_API_URL + `random${category ? '?category=' + encodeURIComponent(category) : ''}`)
   return data
 }
