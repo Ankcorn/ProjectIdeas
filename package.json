@@ -1,10 +1,10 @@
 {
-  "name": "projectideas",
+  "name": "nody-christmas",
   "description": "Creates a fun node project for you to work on!",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "ThomasAnkcorn @Ankcorn",
   "bin": {
-    "projectideas": "./bin/run"
+    "nody-christmas": "./bin/run"
   },
   "bugs": "https://github.com/https://github.com/Ankcorn/ProjectIdeas.git/https://github.com/Ankcorn/ProjectIdeas.git/issues",
   "dependencies": {
