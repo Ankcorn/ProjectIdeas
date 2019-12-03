@@ -1,7 +1,7 @@
 {
   "name": "nody-christmas",
   "description": "Creates a fun node project for you to work on!",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "ThomasAnkcorn @Ankcorn",
   "bin": {
     "nody-christmas": "./bin/run"
